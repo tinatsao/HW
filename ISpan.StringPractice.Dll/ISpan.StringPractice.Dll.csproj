@@ -44,6 +44,7 @@
     <Compile Include="DateTools.cs" />
     <Compile Include="LeaveService.cs" />
     <Compile Include="MathClass.cs" />
+    <Compile Include="Solution.cs" />
     <Compile Include="StringTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
