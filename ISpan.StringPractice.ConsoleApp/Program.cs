@@ -11,25 +11,15 @@ namespace ISpan.StringPractice.ConsoleApp
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[]{ 1 };
-
-			List<int> list1 = new List<int>();
-			List<int> list2 = new List<int>();
-
-			foreach (int item in nums)
+			Solution solution = new Solution();
+			int nums = 123456;
+			int[] result = solution.GetDigts(nums);
+			foreach (int item in result)
 			{
-				if (list1.Contains(item))
-				{
-					list2.Add(item);
-				}
-				else
-				{
-					list1.Add(item);
-				}
+				Console.WriteLine(item);
 			}
-			Console.WriteLine(list1.Except(list2).First());
 		}
-    }
+	}
 }
 //LeaveService leaveService = new LeaveService();
 //int CaseA = leaveService.CalcTotalLeaveHours(9,18);
@@ -57,3 +47,22 @@ namespace ISpan.StringPractice.ConsoleApp
 //MathClass mathClass = new MathClass();
 //Console.WriteLine(mathClass.SumArithmeticProgression(1, 99, 2));
 //Console.WriteLine(mathClass.SumArithmeticProgressionFunction(1,99,2));
+
+
+//int[] nums = new int[]{ 1 };
+
+//List<int> list1 = new List<int>();
+//List<int> list2 = new List<int>();
+
+//foreach (int item in nums)
+//{
+//	if (list1.Contains(item))
+//	{
+//		list2.Add(item);
+//	}
+//	else
+//	{
+//		list1.Add(item);
+//	}
+//}
+//Console.WriteLine(list1.Except(list2).First());
