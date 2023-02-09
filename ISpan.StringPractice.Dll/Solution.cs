@@ -69,7 +69,7 @@ namespace ISpan.StringPractice.Dll
 			for (int i = 0; i < row; i++)
 			{
 				
-				result += allString.Substring(0, row + j)+"\r\n";
+				result += $"{allString.Substring(0, row + j),11}" +"\r\n";
 				allString = allString.Substring(row + j);
 				j--;
 			}
