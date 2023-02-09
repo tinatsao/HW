@@ -17,20 +17,11 @@ namespace ISpan.StringPractice.ConsoleApp
 			List<int> list2 = new List<int>();
 
 			foreach (int item in nums)
-			{
-				if (list1.Contains(item))
-				{
-					list2.Add(item);
+
+            Console.WriteLine(mathClass.SingleNumberXor(nums).ToString());
 				}
-				else
-				{
-					list1.Add(item);
-				}
-			}
-			Console.WriteLine(list1.Except(list2).First());
 		}
     }
-}
 //LeaveService leaveService = new LeaveService();
 //int CaseA = leaveService.CalcTotalLeaveHours(9,18);
 //int CaseB = leaveService.CalcTotalLeaveHours(9, 17);
