@@ -54,5 +54,26 @@ namespace ISpan.StringPractice.Dll
 			}
 			return result.ToArray();
 		}
+		
+		public string PrintHello(string source,int row)
+		{
+			int stringLength = 0;
+			for (int i= row+5; i>= row; i--)
+			{
+				stringLength += i;
+			}
+			string allString = string.Concat(Enumerable.Repeat(source, (stringLength / source.Length)+1));
+			
+			string result = string.Empty;
+			int j = 5;
+			for (int i = 0; i < row; i++)
+			{
+				
+				result += allString.Substring(0, row + j)+"\r\n";
+				allString = allString.Substring(row + j);
+				j--;
+			}
+			return result;
+		}
 	}
 }

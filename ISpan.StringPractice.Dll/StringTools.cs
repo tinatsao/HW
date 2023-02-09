@@ -8,5 +8,6 @@ namespace ISpan.StringPractice.Dll
 {
     public class StringTools
     {
+        
     }
 }

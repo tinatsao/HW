@@ -12,13 +12,9 @@ namespace ISpan.StringPractice.ConsoleApp
         static void Main(string[] args)
         {
 			Solution solution = new Solution();
-			
-			int nums = 123456;
-			int[] result = solution.GetDigtsUseDiv(nums);
-			foreach(int item in result)
-			{
-				Console.WriteLine(item);
-			}
+			string source = "Hello";
+			int row = 6;
+			Console.WriteLine(solution.PrintHello(source, row));
 		}	
 	}
 }
