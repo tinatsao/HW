@@ -12,13 +12,10 @@ namespace ISpan.StringPractice.ConsoleApp
         static void Main(string[] args)
         {
 			Solution solution = new Solution();
-			int nums = 123456;
-			int[] result = solution.GetDigts(nums);
-			foreach (int item in result)
-			{
-				Console.WriteLine(item);
-			}
-		}
+			int[] nums = new int[]{ 3,2,3,5,5};
+
+			Console.WriteLine(solution.SingleNumber(nums));
+		}	
 	}
 }
 //LeaveService leaveService = new LeaveService();
@@ -66,3 +63,11 @@ namespace ISpan.StringPractice.ConsoleApp
 //	}
 //}
 //Console.WriteLine(list1.Except(list2).First());
+
+//Solution solution = new Solution();
+//int nums = 123456;
+//int[] result = solution.GetDigts(nums);
+//foreach (int item in result)
+//{
+//	Console.WriteLine(item);
+//}

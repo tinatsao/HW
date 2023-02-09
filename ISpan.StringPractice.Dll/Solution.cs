@@ -8,10 +8,25 @@ namespace ISpan.StringPractice.Dll
 {
 	public class Solution
 	{
-		//public int SingleNumber(int[] nums)
-		//{
+		/// <summary>
+		/// What:如何找出一個陣列中只出現一次的數字
+		/// How:使用XOR運算
+		/// </summary>
+		/// <param name="nums"></param>
+		/// <returns></returns>
+		public int SingleNumber(int[] nums)
+		{
+			int result = 0;
+			for (int i = 0; i< nums.Length; i++)
+			{
+				result ^= nums[i];
+			}
+			return result;
+		}
+		
 
-		//}
+
+		
 		/// <summary>
 		/// What:如何取得一個正整數的每一位數
 		/// </summary>
@@ -20,12 +35,9 @@ namespace ISpan.StringPractice.Dll
 		public int[] GetDigts(int num)
 		{
 			string strNum = num.ToString();
-			int[] result = new int[] { };
-			foreach (char item in strNum)
-			{
-				result.Append((int)item);
-			}
-			return result;
+			var q = from c in strNum.Select(c => int.Parse(c.ToString())) select c;
+			return q.ToArray();
+
 		}
 	}
 }
