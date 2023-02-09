@@ -12,62 +12,13 @@ namespace ISpan.StringPractice.ConsoleApp
         static void Main(string[] args)
         {
 			Solution solution = new Solution();
-			int[] nums = new int[]{ 3,2,3,5,5};
-
-			Console.WriteLine(solution.SingleNumber(nums));
+			
+			int nums = 123456;
+			int[] result = solution.GetDigtsUseDiv(nums);
+			foreach(int item in result)
+			{
+				Console.WriteLine(item);
+			}
 		}	
 	}
 }
-//LeaveService leaveService = new LeaveService();
-//int CaseA = leaveService.CalcTotalLeaveHours(9,18);
-//int CaseB = leaveService.CalcTotalLeaveHours(9, 17);
-//int CaseC = leaveService.CalcTotalLeaveHours(9, 12);
-//int CaseD = leaveService.CalcTotalLeaveHours(9, 13);
-//int CaseE = leaveService.CalcTotalLeaveHours(12,14);
-//int CaseF = leaveService.CalcTotalLeaveHours(8, 18);
-//int CaseG = leaveService.CalcTotalLeaveHours(9, 23);
-
-
-//Console.WriteLine($"請假時間為09~18,總請假時數為{CaseA}小時。");
-//Console.WriteLine($"請假時間為09~17,總請假時數為{CaseB}小時。");
-//Console.WriteLine($"請假時間為09~12,總請假時數為{CaseC}小時。");
-//Console.WriteLine($"請假時間為09~13,總請假時數為{CaseD}小時。");
-//Console.WriteLine($"請假時間為12~14,總請假時數為{CaseE}小時。");
-//Console.WriteLine($"請假時間為08~18,總請假時數為{CaseF}小時。");
-//Console.WriteLine($"請假時間為09~23,總請假時數為{CaseG}小時。");
-
-
-//string input = "890125";
-//string output = DateTools.RocConvertToAdDate(input);
-//Console.WriteLine(output);
-
-//MathClass mathClass = new MathClass();
-//Console.WriteLine(mathClass.SumArithmeticProgression(1, 99, 2));
-//Console.WriteLine(mathClass.SumArithmeticProgressionFunction(1,99,2));
-
-
-//int[] nums = new int[]{ 1 };
-
-//List<int> list1 = new List<int>();
-//List<int> list2 = new List<int>();
-
-//foreach (int item in nums)
-//{
-//	if (list1.Contains(item))
-//	{
-//		list2.Add(item);
-//	}
-//	else
-//	{
-//		list1.Add(item);
-//	}
-//}
-//Console.WriteLine(list1.Except(list2).First());
-
-//Solution solution = new Solution();
-//int nums = 123456;
-//int[] result = solution.GetDigts(nums);
-//foreach (int item in result)
-//{
-//	Console.WriteLine(item);
-//}

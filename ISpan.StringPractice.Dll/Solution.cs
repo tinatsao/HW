@@ -23,12 +23,10 @@ namespace ISpan.StringPractice.Dll
 			}
 			return result;
 		}
-		
 
-
-		
 		/// <summary>
 		/// What:如何取得一個正整數的每一位數
+		/// How:先轉成字串，再轉成陣列
 		/// </summary>
 		/// <param name="num"></param>
 		/// <returns></returns>
@@ -38,6 +36,23 @@ namespace ISpan.StringPractice.Dll
 			var q = from c in strNum.Select(c => int.Parse(c.ToString())) select c;
 			return q.ToArray();
 
+		}
+
+		/// <summary>
+		/// What:如何取得一個正整數的每一位數
+		/// How:依序將每個數字除以10，取餘數
+		/// </summary>
+		/// <param name="num"></param>
+		/// <returns></returns>
+		public int[] GetDigtsUseDiv(int num)
+		{
+			List<int> result = new List<int>();
+			while (num > 0)
+			{
+				result.Insert(0, num % 10);
+				num = num / 10;
+			}
+			return result.ToArray();
 		}
 	}
 }
