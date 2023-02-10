@@ -8,9 +8,72 @@ namespace ISpan.StringPractice.Dll
 {
 	public class Solution
 	{
-	//	public int SingleNumber(int[] nums)
-	//	{
+		/// <summary>
+		/// What:如何找出一個陣列中只出現一次的數字
+		/// How:使用XOR運算
+		/// </summary>
+		/// <param name="nums"></param>
+		/// <returns></returns>
+		public int SingleNumber(int[] nums)
+		{
+			int result = 0;
+			for (int i = 0; i< nums.Length; i++)
+			{
+				result ^= nums[i];
+			}
+			return result;
+		}
 
-	//	}
+		/// <summary>
+		/// What:如何取得一個正整數的每一位數
+		/// How:先轉成字串，再轉成陣列
+		/// </summary>
+		/// <param name="num"></param>
+		/// <returns></returns>
+		public int[] GetDigts(int num)
+		{
+			string strNum = num.ToString();
+			var q = from c in strNum.Select(c => int.Parse(c.ToString())) select c;
+			return q.ToArray();
+
+		}
+
+		/// <summary>
+		/// What:如何取得一個正整數的每一位數
+		/// How:依序將每個數字除以10，取餘數
+		/// </summary>
+		/// <param name="num"></param>
+		/// <returns></returns>
+		public int[] GetDigtsUseDiv(int num)
+		{
+			List<int> result = new List<int>();
+			while (num > 0)
+			{
+				result.Insert(0, num % 10);
+				num = num / 10;
+			}
+			return result.ToArray();
+		}
+		
+		public string PrintHello(string source,int row)
+		{
+			int stringLength = 0;
+			for (int i= row+5; i>= row; i--)
+			{
+				stringLength += i;
+			}
+			string allString = string.Concat(Enumerable.Repeat(source, (stringLength / source.Length)+1));
+			
+			string result = string.Empty;
+			int j = 5;
+			for (int i = 0; i < row; i++)
+			{
+				
+				result += $"{allString.Substring(0, row + j),11}" +"\r\n";
+				allString = allString.Substring(row + j);
+				j--;
+			}
+			return result;
+		}
 	}
 }
