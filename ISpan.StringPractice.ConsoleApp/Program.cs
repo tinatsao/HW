@@ -19,9 +19,9 @@ namespace ISpan.StringPractice.ConsoleApp
 			foreach (int item in nums)
 
             Console.WriteLine(mathClass.SingleNumberXor(nums).ToString());
-				}
 		}
     }
+}
 //LeaveService leaveService = new LeaveService();
 //int CaseA = leaveService.CalcTotalLeaveHours(9,18);
 //int CaseB = leaveService.CalcTotalLeaveHours(9, 17);
@@ -48,3 +48,6 @@ namespace ISpan.StringPractice.ConsoleApp
 //MathClass mathClass = new MathClass();
 //Console.WriteLine(mathClass.SumArithmeticProgression(1, 99, 2));
 //Console.WriteLine(mathClass.SumArithmeticProgressionFunction(1,99,2));
+
+
+

@@ -17,7 +17,7 @@ namespace ISpan.StringPractice.Dll
             }
             return sum;
         }
-            
+
         
         /// <summary>
         /// What: 一個陣列裡面有一個數字只出現一次，其他數字都出現兩次，請找出這個數字
