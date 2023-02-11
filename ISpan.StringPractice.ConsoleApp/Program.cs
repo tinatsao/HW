@@ -13,7 +13,7 @@ namespace ISpan.StringPractice.ConsoleApp
         {
 			Solution solution = new Solution();
 			string source = "Hello";
-			int row = 6;
+			int row =6;
 			Console.WriteLine(solution.PrintHello(source, row));
 		}	
 	}

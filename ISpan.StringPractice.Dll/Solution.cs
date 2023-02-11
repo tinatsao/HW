@@ -58,18 +58,20 @@ namespace ISpan.StringPractice.Dll
 		public string PrintHello(string source,int row)
 		{
 			int stringLength = 0;
-			for (int i= row+5; i>= row; i--)
+			int topicNum = 5;
+			string allString = string.Empty;
+			string result = string.Empty;
+			
+			for (int i= row+ topicNum; i>= (row+ topicNum)-(row-1); i--)
 			{
 				stringLength += i;
 			}
-			string allString = string.Concat(Enumerable.Repeat(source, (stringLength / source.Length)+1));
+			allString = string.Concat(Enumerable.Repeat(source, (stringLength / source.Length)+1));
 			
-			string result = string.Empty;
-			int j = 5;
+			int j = topicNum;
 			for (int i = 0; i < row; i++)
 			{
-				
-				result += $"{allString.Substring(0, row + j),11}" +"\r\n";
+				result += new string(' ',(row+ topicNum) - (row+j))+allString.Substring(0, row + j) +"\r\n";
 				allString = allString.Substring(row + j);
 				j--;
 			}
