@@ -54,7 +54,22 @@ namespace ISpan.StringPractice.Dll
 			}
 			return result.ToArray();
 		}
-		
+		/// <summary>
+		/// What:請寫一個程式可以輸入列數n，第一列列印出n+5個字，以後每列遞減一個字，其內容以"Hello"字串 依序取出字來填入。
+		///以n=6為例 
+		///HelloHelloH
+		/// elloHelloH
+		///  elloHello
+		///   HelloHel
+		///    loHello
+		///     HelloH
+		/// How:1. stringLength:先算出總共需要幾個字
+		/// 2.allString:依據總字數產生一個長字串
+		/// 3. result:使用Substring從長字串中，切出我想要的結果。
+		/// </summary>
+		/// <param name="source">"Hello"</param>
+		/// <param name="row">6</param>
+		/// <returns></returns>
 		public string PrintHello(string source,int row)
 		{
 			int stringLength = 0;
@@ -77,5 +92,12 @@ namespace ISpan.StringPractice.Dll
 			}
 			return result;
 		}
+		
+		
+		
+
+
+
 	}
 }
+
