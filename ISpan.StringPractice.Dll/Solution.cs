@@ -92,11 +92,14 @@ namespace ISpan.StringPractice.Dll
 			}
 			return result;
 		}
-		
-		
-		
 
 
+	
+	
+		public int[] TwoSum(int[] nums, int target)
+		{
+
+		}
 
 	}
 }
