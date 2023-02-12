@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ISpan.StringPractice.Dll
 {
-    public static class StringTools
-    {
+	public static class StringTools
+	{
 		/// <summary>
 		/// 生成一行文字以及最後一個字的下一個字,應該是template的哪一個索引值
 		/// </summary>
@@ -33,6 +33,23 @@ namespace ISpan.StringPractice.Dll
 				}
 			}
 			return (sb.ToString(), currentIndex);
+		}
+		public static (string, int) GiveRowString(string template, int startIndex, int length)
+		{
+			int currentIndex = startIndex;
+
+			StringBuilder sb = new StringBuilder();
+			for (int i = 0; i < length; i++)
+			{
+				sb.Append(template[currentIndex]);
+				currentIndex++;
+				if (currentIndex == template.Length)
+				{
+					currentIndex = 0;
+				}
+			}
+			return (sb.ToString(), currentIndex);
+
 		}
 	}
 }
