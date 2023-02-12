@@ -16,13 +16,16 @@ namespace ISpan.StringPractice.ConsoleApp
             Solution solution = new Solution();
             
 			nums = new int[] { 2, 7, 11, 15}; target = 9;
-            Console.WriteLine(solution.TwoSum(nums, target));
+            int[] result = solution.TwoSum(nums, target);
+            Console.WriteLine($"[{result[0]},{result[1]}]");
             
 			nums = new int[] { 3,2,4 } ; target = 6;
-			Console.WriteLine(solution.TwoSum(nums, target));
+			result = solution.TwoSum(nums, target);
+			Console.WriteLine($"[{result[0]},{result[1]}]");
 
 			nums = new int[] { 3, 3 }; target = 6;
-			Console.WriteLine(solution.TwoSum(nums, target));
+			result = solution.TwoSum(nums, target);
+			Console.WriteLine($"[{result[0]},{result[1]}]");
 		}	
 	}
 }

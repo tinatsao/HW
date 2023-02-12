@@ -98,9 +98,9 @@ namespace ISpan.StringPractice.Dll
 	
 		public int[] TwoSum(int[] nums, int target)
 		{
-			for (int i = 0; i < nums.length; i++)
+			for (int i = 0; i < nums.Length; i++)
 			{
-				for (int j = i + 1; j < nums.length; j++)
+				for (int j = i + 1; j < nums.Length; j++)
 				{
 					if (nums[j] == target - nums[i])
 					{
