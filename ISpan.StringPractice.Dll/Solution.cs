@@ -112,6 +112,16 @@ namespace ISpan.StringPractice.Dll
 			return null;
 		}
 
+		public int SingleNumber2(int[] nums)
+		{
+			int result = 0;
+			foreach (int item in nums)
+			{
+				result ^= item;
+			}
+			return result;
+		}
+
 	}
 }
 
