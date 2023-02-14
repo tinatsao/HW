@@ -59,7 +59,7 @@ namespace ISpan.StringPractice.Dll
 		{
 
 			const int topicNum = 5;
-			int stringLength = 0;
+            int stringLength = 0;
 			for (int i= row+ topicNum; i>= row; i--)
 			{
 				stringLength += i;
@@ -71,7 +71,7 @@ namespace ISpan.StringPractice.Dll
 			
 			for (int i = 0; i < row; i++)
 			{
-				
+
 				result += $"{allString.Substring(0, row + j),row+ topicNum}" + "\r\n";
 				allString = allString.Substring(row + j);
 				j--;
