@@ -121,7 +121,24 @@ namespace ISpan.StringPractice.Dll
 			}
 			return result;
 		}
-
+        /// <summary>
+        /// What:請寫一個程式可以輸入一個正整數，並將該正整數的每一位數字平方後相加。
+		/// How:先取餘數取得每一位數字，再平方相加
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int GetSumOfSquares(int nums)
+		{
+			//nums >=0
+			int result = 0;
+			while (nums > 0)
+			{
+				//result += (nums%10) * (nums % 10);
+				result += (int)Math.Pow(nums % 10, 2);
+                nums = nums / 10;
+            }
+			return result;
+        }
 	}
 }
 
