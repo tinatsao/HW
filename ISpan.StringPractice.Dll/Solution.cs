@@ -54,29 +54,74 @@ namespace ISpan.StringPractice.Dll
 			}
 			return result.ToArray();
 		}
-		
+		/// <summary>
+		/// What:請寫一個程式可以輸入列數n，第一列列印出n+5個字，以後每列遞減一個字，其內容以"Hello"字串 依序取出字來填入。
+		///以n=6為例 
+		///HelloHelloH
+		/// elloHelloH
+		///  elloHello
+		///   HelloHel
+		///    loHello
+		///     HelloH
+		/// How:1. stringLength:先算出總共需要幾個字
+		/// 2.allString:依據總字數產生一個長字串
+		/// 3. result:使用Substring從長字串中，切出我想要的結果。
+		/// </summary>
+		/// <param name="source">"Hello"</param>
+		/// <param name="row">6</param>
+		/// <returns></returns>
 		public string PrintHello(string source,int row)
 		{
-
-			const int topicNum = 5;
-            int stringLength = 0;
-			for (int i= row+ topicNum; i>= row; i--)
+			int stringLength = 0;
+			int topicNum = 5;
+			string allString = string.Empty;
+			string result = string.Empty;
+			
+			for (int i= row+ topicNum; i>= (row+ topicNum)-(row-1); i--)
 			{
 				stringLength += i;
 			}
-			string allString = string.Concat(Enumerable.Repeat(source, (stringLength / source.Length)+1));
+			allString = string.Concat(Enumerable.Repeat(source, (stringLength / source.Length)+1));
 			
-			string result = string.Empty;
 			int j = topicNum;
-			
 			for (int i = 0; i < row; i++)
 			{
-
-				result += $"{allString.Substring(0, row + j),row+ topicNum}" + "\r\n";
+				result += new string(' ',(row+ topicNum) - (row+j))+allString.Substring(0, row + j) +"\r\n";
 				allString = allString.Substring(row + j);
 				j--;
 			}
 			return result;
 		}
+
+
+	
+	
+		public int[] TwoSum(int[] nums, int target)
+		{
+			for (int i = 0; i < nums.Length; i++)
+			{
+				for (int j = i + 1; j < nums.Length; j++)
+				{
+					if (nums[j] == target - nums[i])
+					{
+						return new int[] { i, j };
+					}
+				}
+			}
+			// In case there is no solution, we'll just return null
+			return null;
+		}
+
+		public int SingleNumber2(int[] nums)
+		{
+			int result = 0;
+			foreach (int item in nums)
+			{
+				result ^= item;
+			}
+			return result;
+		}
+
 	}
 }
+
