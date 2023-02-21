@@ -127,18 +127,63 @@ namespace ISpan.StringPractice.Dll
         /// </summary>
         /// <param name="nums"></param>
         /// <returns></returns>
-        public int GetSumOfSquares(int nums)
+        public int GetSumOfSquares(int num)
 		{
-			//nums >=0
 			int result = 0;
-			while (nums > 0)
+			while (num > 0)
 			{
-				//result += (nums%10) * (nums % 10);
-				result += (int)Math.Pow(nums % 10, 2);
-                nums = nums / 10;
+				result += num %10 * num % 10;
+                num = num / 10;
             }
 			return result;
         }
+		public void SwapItemsValue(int[] nums, int indexX, int indexY)
+		{
+			int temp = nums[indexX];
+			nums[indexX] = nums[indexY];
+			nums[indexY] = temp;
+		}
+
+		/// <summary>
+		/// what: 如何確認陣列的0全部都在陣列的右側?
+		/// how: 先找到第一個0的位置，再從0的位置開始往右邊找，如果有比0大的數字，就回傳false
+		/// </summary>
+		public bool IsZeroRight(int[] items)
+		{
+			int firstZeroIndex = Array.FindIndex(items, x => x == 0);
+			if (firstZeroIndex < items.Length && firstZeroIndex >= 0)
+			{
+				for (int i = firstZeroIndex; i < items.Length-1; i++)
+				{
+					if (items[i]<items[i+1])
+					{
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+		/// <summary>
+		/// 如何確認陣列的0全部都在陣列的右側
+		/// </summary>
+		/// <param name="items"></param>
+		/// <returns></returns>
+		public bool IsZeroRight2(int[] items)
+		{
+			int zeroCount = 0;
+			for (int i = items.Length - 1; i >= 0; i--)
+			{
+				if (items[i] == 0)
+				{
+					zeroCount++;
+				}
+				else
+				{
+					break;
+				}
+			}
+			return zeroCount == items.Length;
+		}
 	}
 }
 

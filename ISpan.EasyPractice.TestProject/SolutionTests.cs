@@ -28,5 +28,19 @@ namespace ISpan.EasyPractice.TestProject
 			Assert.AreEqual(expected, actual);
 		}
 
+		
+		
+		[TestCase(new int[] { 10, 1, 2, 3, 4, 5 }, 0, 1, new int[] { 1, 10, 2, 3, 4, 5 })]
+		[TestCase(new int[] {10,6,2,3,4,5 }, 1,5, new int[] { 10, 5 , 2, 3, 4, 6 })]
+		
+
+		public void SwapItemsValue_交換指定index的數字(int[] nums, int x,int y ,int[] expected)
+		{
+			Solution solution = new Solution();
+			solution.SwapItemsValue(nums,  x, y);
+			int[] actual = nums;
+			Assert.AreEqual(expected, actual);
+		}
+
 	}
 }

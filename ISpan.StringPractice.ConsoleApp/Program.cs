@@ -11,9 +11,18 @@ namespace ISpan.StringPractice.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Solution solution = new Solution();
-            Console.WriteLine(solution.GetSumOfSquares(23));
-            Console.WriteLine(solution.GetSumOfSquares(123));
-        }	
+			var items = new int[] { 10,1,2,3,4,0};
+			Console.WriteLine(new Solution().IsZeroRight(items));
+			items = new int[] { 10, 1, 2, 3, 0, 0 };
+			Console.WriteLine(new Solution().IsZeroRight(items));
+			items = new int[] { 0,0,0,0};
+			Console.WriteLine(new Solution().IsZeroRight(items));
+			items = new int[] {10,1,2,3,4,2};
+			Console.WriteLine(new Solution().IsZeroRight(items));
+			items = new int[] { 10,6,2,3,0,5};
+			Console.WriteLine(new Solution().IsZeroRight(items));
+
+
+		}	
 	}
 }
