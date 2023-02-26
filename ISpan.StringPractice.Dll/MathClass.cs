@@ -58,7 +58,27 @@ namespace ISpan.StringPractice.Dll
             }
             return list1.Except(list2).First();
         }
-    }
+        public (int,int) OrderTwoNum1(int num1,int num2)
+        {
+            if (num1 > num2)
+            {
+                int temp = num1;
+				num1 = num2;
+				num2 = temp;
+            }
+               return (num1, num2);
+        }
+		public (int, int) OrderTwoNum2(int num1, int num2)
+		{
+			if (num1 > num2)
+			{
+                num1 ^= num2;
+                num2 ^= num1;
+				num1 ^= num2;
+			}
+			return (num1, num2);
+		}
+	}
 }
 
 
