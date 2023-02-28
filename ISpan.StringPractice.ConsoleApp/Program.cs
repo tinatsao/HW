@@ -16,17 +16,11 @@ namespace ISpan.StringPractice.ConsoleApp
 	{
 		static void Main(string[] args)
 		{
-			double x = 0.12345;
-			string s;
-			
-			s = String.Format("{0:P}", x); // s 的值為 "12.35%"
-			
-			//字串插值寫法
-			s = $"{x:P}"; // s 的值為 "12.35%"
-			s = $"{x:P3}"; // s 的值為 "12.345%"
-			x = 123456789;
-			s = $"{x:N2}%"; //s 的值為 "123,456,789.00%"
-							//如果您需要在輸出的百分比值中包含千位分隔符，可以在插值表達式中使用逗號。
+			Console.Write("請輸入身分證字號：");
+			string id = Console.ReadLine();
+			string lastEightDigits = id.Substring(5); // 取得後八碼
+			string hiddenId = new string('*', 5) + lastEightDigits; // 用5個星號替換前五碼
+			Console.WriteLine("隱藏前五碼後的身分證字號為：" + hiddenId);
 		}
 	}
 }

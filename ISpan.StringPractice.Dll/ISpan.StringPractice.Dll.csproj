@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DateTools.cs" />
     <Compile Include="LeaveService.cs" />
+    <Compile Include="List.cs" />
     <Compile Include="MathClass.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Solution.cs" />
