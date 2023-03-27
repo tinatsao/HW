@@ -184,6 +184,44 @@ namespace ISpan.StringPractice.Dll
 			}
 			return zeroCount == items.Length;
 		}
-	}
+		public string PrintStringEasyQ21_1(int rows)
+		{
+			string symbol = "#";
+			string result = string.Empty;
+			
+            for (int i = 0; i < rows; i++)
+            {
+                result += symbol.PadLeft(i+1)+"\r\n";
+			}
+            for (int i = rows-1; i > 0; i--)
+            {
+                result += symbol.PadLeft(i) + "\r\n";
+            }
+            return result;
+        }
+        public string PrintStringEasyQ21_2(int rows)
+        {
+            string symbol = "#";
+            string result = string.Empty;
+            for (int i = 0; i < rows * 2 - 1; i++)
+            {
+                int spaceNums = i < rows ? i + 1 : rows * 2 -i - 1;
+                result += symbol.PadLeft(spaceNums) + "\r\n";
+            }
+            return result;
+        }
+        public string PrintStringEasyQ21_3(int rows)
+        {
+            string symbol = "#";
+            string result = string.Empty;
+            for (int i = 0; i < rows * 2 - 1; i++)
+            {
+                int spaceNums = i < rows ? i + 1 : rows - (i % rows) - 1;
+                result += symbol.PadLeft(spaceNums) + "\r\n";
+            }
+            return result;
+        }
+       
+    }
 }
 

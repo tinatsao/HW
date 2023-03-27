@@ -16,12 +16,9 @@ namespace ISpan.StringPractice.ConsoleApp
 	{
 		static void Main(string[] args)
 		{
-			Console.Write("請輸入身分證字號：");
-			string id = Console.ReadLine();
-			string lastEightDigits = id.Substring(5); // 取得後八碼
-			string hiddenId = new string('*', 5) + lastEightDigits; // 用5個星號替換前五碼
-			Console.WriteLine("隱藏前五碼後的身分證字號為：" + hiddenId);
-		}
+            var solution = new Solution();
+            Console.WriteLine(solution.PrintStringEasyQ21_3(5));
+        }	
 	}
 }
 	
